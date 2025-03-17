@@ -27,6 +27,7 @@ main {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 5px 5px white, inset 0 0 5px 5px white;
+    opacity: 0;
     
 }
 
@@ -34,8 +35,9 @@ main {
 .outest-circle {
     width: 600px;
     height: 600px;
-    animation: glow .5s ease-in-out 0s forwards;
-  
+    animation: glow .3s ease-in-out 0s none, glow .3s ease-in-out 1.5s none;
+   
+   animation-fill-mode: none;
     
 }
 
@@ -43,8 +45,9 @@ main {
 .outer-circle {
     width: 450px;
     height: 450px;
-    animation: glow .5s ease-in-out 0.5s forwards;
-   
+    animation: glow .4s ease-in-out 0.3s none, glow .4s ease-in-out 1.4s none;
+    
+   animation-fill-mode: none;
     position: absolute;
    top: 50%;
     left: 50%;
@@ -54,7 +57,9 @@ main {
 .inner-circle {
     width: 300px;
     height: 300px;
-    animation: glow .5s ease-in-out 1s forwards;
+    animation: glow .3s ease-in-out 0.6s none, glow .5s ease-in-out 1.3s none;
+   
+     animation-fill-mode: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -64,7 +69,9 @@ main {
 .innermost-circle {
     width: 150px;
     height: 150px;
-    animation: glow .5s ease-in-out 1.5s forwards;
+    animation: glow .3s ease-in-out 0.9s none, glow .6s ease-in-out 1.2s none;
+   
+    animation-fill-mode: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -108,3 +115,4 @@ main {
         opacity: 1;
     }
 }
+
