@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+main {
+    position: relative;
+}
+
+.circle {
+    
+    border-radius: 10%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 5px white, inset 0 0 5px 5px white;
+
+}
+
+
+.outest-circle {
+    width: 600px;
+    height: 600px;
+    animation: glow .5s ease-in-out 0s forwards;
+   
+    
+}
+
+
+.outer-circle {
+    width: 450px;
+    height: 450px;
+    animation: glow .5s ease-in-out forwards;
+    animation-delay: 0.5s;
+    
+    
+     
+}
+
+.inner-circle {
+    width: 300px;
+    height: 300px;
+    animation: glow .5s ease-in-out 1s forwards;
+}
+
+.innermost-circle {
+    width: 150px;
+    height: 150px;
+    animation: glow .5s ease-in-out 1.5s forwards;
+}
+
+
+.outest-circle:hover {
+    animation: glow2 .5s ease-in-out forwards;
+}
+
+.outer-circle:hover {
+    animation: glow2 .5s ease-in-out forwards;
+}
+
+.inner-circle:hover {
+    animation: glow2 .5s ease-in-out forwards;
+}
+
+.innermost-circle:hover {
+    animation: glow2 .5s ease-in-out forwards;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes glow2 {
+    0% {
+        opacity: .1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
