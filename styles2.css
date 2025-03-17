@@ -19,6 +19,79 @@ main {
     
 }
 
+.sticks {
+    position: absolute;
+    width: 25px;
+    height: 150px;
+    background-color: green;
+    right: 50%;
+    animation: laydown 1.5s linear forwards;
+}
+
+.stick1 {
+left: 30%;
+bottom: 55.5%;
+transform: rotate(-45deg);
+
+}
+
+.stick2 {
+    right: 30%;
+    bottom:55.4%;
+    transform: rotate(45deg);
+
+}
+
+.stick3 {
+    left: 30%;
+    top: 55.3%;
+    transform: rotate(45deg);
+}
+
+.stick4 {
+    
+    left: 66%;
+    top: 55.5%;
+    transform: rotate(-45deg);
+}
+
+.stick-in {
+    position: absolute;
+    width: 25px;
+    height: 143px;
+    background-image: radial-gradient( rgb(129, 55, 55)10%, red , rgb(100, 10, 52) 60%, rgb(44, 31, 31), rgb(104, 22, 22) 5%);
+    right: 50%;
+   
+}
+
+
+.stickin1 {
+    left: 10%;
+    transform: rotate(-45deg);
+    top: 0%;
+    
+}
+
+.stickin2 {
+    right: 10%;
+    top: 0%;
+    transform: rotate(45deg);
+}
+
+.stickin3 {
+    left: 10%;
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.stickin4 {
+   
+    right: 10%;
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+
 .circle {
     
     border-radius: 10%;
@@ -35,7 +108,7 @@ main {
 .outest-circle {
     width: 600px;
     height: 600px;
-    animation: glow .3s ease-in-out 0s none, glow .3s ease-in-out 1.5s none;
+    animation: glow .3s ease-in-out 0s none, glowoutest 1.0s ease-in 1.7s none;
    
    animation-fill-mode: none;
     
@@ -45,7 +118,7 @@ main {
 .outer-circle {
     width: 450px;
     height: 450px;
-    animation: glow .4s ease-in-out 0.3s none, glow .4s ease-in-out 1.4s none;
+    animation: glow .3s ease-in-out 0.3s none, glowouter 1.1s ease-in 1.6s none;
     
    animation-fill-mode: none;
     position: absolute;
@@ -57,7 +130,7 @@ main {
 .inner-circle {
     width: 300px;
     height: 300px;
-    animation: glow .3s ease-in-out 0.6s none, glow .5s ease-in-out 1.3s none;
+    animation: glow .3s ease-in-out 0.6s none, glowinner 1.2s ease-in 1.5s none;
    
      animation-fill-mode: none;
     position: absolute;
@@ -69,7 +142,7 @@ main {
 .innermost-circle {
     width: 150px;
     height: 150px;
-    animation: glow .3s ease-in-out 0.9s none, glow .6s ease-in-out 1.2s none;
+    animation: glow .3s ease-in-out 0.9s none, glowinnermost 1.3s ease-in 1.4s none;
    
     animation-fill-mode: none;
     position: absolute;
@@ -111,8 +184,71 @@ main {
     0% {
         opacity: .1;
     }
+    50% {}
     100% {
         opacity: 1;
     }
 }
 
+@keyframes glowinnermost {
+    0% {
+        opacity: 0;
+    }
+    20.833% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 25px 25px white, ;
+    }
+}
+
+@keyframes glowinner {
+    0% {
+        opacity: 0;
+    }
+    27.77% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 10px 10px white, ;
+    }
+}
+
+@keyframes glowouter {
+    0% {
+        opacity: 0;
+    }
+    41.66% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 10px 10px white, ;
+    }
+}
+
+@keyframes glowoutest {
+    0% {
+        opacity: 0;
+    }
+    83.33% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 10px 10px white, ;
+    }
+}
+
+@keyframes laydown1 {
+    0% {
+        left: 30%;
+        bottom: 55.5%;
+transform: rotate(-45deg), scale(1.3);
+    }
+    100% {
+       transform: scale(1);
+    }
+}
