@@ -16,6 +16,7 @@ body {
 
 main {
     position: relative;
+    
 }
 
 .circle {
@@ -26,7 +27,7 @@ main {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 5px 5px white, inset 0 0 5px 5px white;
-
+    
 }
 
 
@@ -34,7 +35,7 @@ main {
     width: 600px;
     height: 600px;
     animation: glow .5s ease-in-out 0s forwards;
-   
+  
     
 }
 
@@ -42,23 +43,32 @@ main {
 .outer-circle {
     width: 450px;
     height: 450px;
-    animation: glow .5s ease-in-out forwards;
-    animation-delay: 0.5s;
-    
-    
-     
+    animation: glow .5s ease-in-out 0.5s forwards;
+   
+    position: absolute;
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .inner-circle {
     width: 300px;
     height: 300px;
     animation: glow .5s ease-in-out 1s forwards;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .innermost-circle {
     width: 150px;
     height: 150px;
     animation: glow .5s ease-in-out 1.5s forwards;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
