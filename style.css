@@ -59,6 +59,13 @@ justify-content: center;
 
 a i {
    color: rgb(170, 249, 255);
+   text-shadow: 0 0 5px rgb(170, 249, 255) ;
+   transition: scale .5s ease-in-out forwards, text-shadow .5s ease-in-out forwards;
+}
+
+i:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgb(170, 249, 255)
 }
 
 .fire {
