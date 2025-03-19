@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Berkshire+Swash&family=Changa:wght@200..800&family=Cinzel:wght@400..900&family=Emblema+One&family=Love+Ya+Like+A+Sister&family=Tektur:wght@400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+gap: 100px;
+   
+}
+
+
+
+header {
+    margin-top: 20px;
+    height: 300px;
+    width: 90%;
+    background: linear-gradient(180deg, black, rgb(255, 2, 141) , rgba(128, 126, 47, 0.986), white, rgb(134, 133, 54), rgb(255, 0, 106), black, black,  rgb(248, 20, 20) , rgb(116, 111, 48), white, rgb(122, 118, 53), red, black, black, black, rgb(252, 2, 106) , rgb(133, 131, 60), white, rgb(116, 111, 52), rgb(255, 0, 76), black, black, rgb(248, 20, 180) , rgb(143, 135, 61), white, rgb(133, 134, 56), red, black, black );
+
+    display: flex;
+justify-content: center;
+align-items: center;
+font-size: 5em;
+letter-spacing: 30px;
+animation: background-position 10s linear infinite;
+background-clip: text;
+-webkit-background-clip: text;
+
+
+}
+
+h1 {
+    color: transparent;
+    text-shadow: rgb(208, 4, 248);
+
+}
+
+.icon {
+    position: relative;
+    height: 100px;
+    width: 100px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+i {
+    font-size: 3em;
+    position: relative;
+    text-shadow: 0 0 10px rgb(255, 0, 234);
+
+}
+
+a {
+    color: black;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, red, blue);
+    z-index: -1;
+    border-radius: 10px; 
+    filter: blur(10px); 
+}
+
+@keyframes background-position {
+    0% {
+        background-position-y: 0px;
+        text-shadow: 0 0 25px rgb(183, 0, 255);
+    }
+    25% {
+        text-shadow:0 0 25px rgb(4, 170, 247);
+    }
+    50% {
+        text-shadow: 0 0 25px red;
+    }
+
+    100% {
+        background-position-y: 220px;
+        text-shadow: 0 0 25px rgb(183, 0, 255)
+    }
+}
