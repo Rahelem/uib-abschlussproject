@@ -22,12 +22,30 @@ main {
 #touch-surface {
     width: 150px;
     height: 150px;
-    background: pink;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#touch-surface > ul > li {
+list-style-type: none;
+font-size: 1.3em;
+margin: 8px 
+}
+
+#touch-surface > ul > li > a {
+    text-decoration: none;
+    color: rgb(131, 68, 231);
+    opacity: 0;
+    text-shadow: 0 0 5px blueviolet;
+   
 }
 
 .sticks {
@@ -41,7 +59,7 @@ main {
     border-radius: 50%;
     box-shadow: inset 0 0 5px 3px rgb(150, 147, 147), 0 0 2px 3px white;
     z-index: 10;
-    animation: glowsticks 0.9s ease-in-out 0.6s none;
+    animation: glowsticks 0.9s ease-in-out 0.6s none, glowsticks 1.3s ease-in-out 1.4s none ;
     
     
 }
@@ -95,7 +113,9 @@ transform: rotate(-45deg);
    border: 1px solid red;
    border-radius: 50%;
    box-shadow: 0 0 5px 5px red;
-   opacity: .4;
+   opacity: 0;
+   animation: glowstickin5 .9s ease-in-out none, glowstickin6 1s ease-in-out 1.6s none;
+  
 }
 
 
@@ -204,23 +224,54 @@ transform: rotate(-45deg);
 
 
 
+.inner-circle:hover ~ .stick-in {
+    animation: glowstickin 0.8s ease-in-out forwards;
+}
+
+.outest-circle:hover ~ .stick-in {
+animation: glowstickin3 .3s ease-in-out forwards, glowstickin4 .3s ease-in-out forwards
+}
+
+
+
+
+#touch-surface:hover a {
+    animation: fontappear 1s ease-in-out 1.5s forwards;
+}
+
+a:hover {
+animation: scalefont .5s ease-in-out forwards
+} 
+
+#touch-surface:hover ~ .innermost-circle {
+     animation: glow2 .5s ease-in-out forwards ;
+}
+
+/*#touch-surface:hover ~ .inner-circle {
+     animation: glow2 .5s ease-in-out forwards ;
+}
+#touch-surface:hover ~ .outer-circle {
+     animation: glow2 .5s ease-in-out forwards ;
+}
+#touch-surface:hover ~ .outest-circle {
+     animation: glow2 .5s ease-in-out forwards ;
+}*/
+
+
 
 
 #touch-surface:hover ~ .sticks {
     animation: glowsticks 0.9s ease-in-out forwards;
 }
 
-
-
-
 #touch-surface:hover ~ .stick1 {
     /*transform: rotate(-45deg) translateY(10px) !important;*/
     animation: insert1 1.5s ease-in-out forwards;
 }
 
-/*#touch-surface:hover {
-    background: red;
-}*/
+
+
+
 #touch-surface:hover ~ .stick2 {
     /*transform: rotate(-45deg) translateY(10px) !important;*/
     animation: insert2 1.5s ease-in-out forwards;
@@ -238,7 +289,7 @@ transform: rotate(-45deg);
 
 #touch-surface:hover ~ .stick-in{
     /*transform: rotate(-45deg) translateY(10px) !important;*/
-    animation: insertglow .5s ease-in-out 1.5s forwards;
+    animation:  glowstickin2 .5s ease-in-out forwards, insertglow .5s ease-in-out 1.5s forwards;
 }
 
 @keyframes glow {
@@ -321,7 +372,7 @@ transform: rotate(-45deg);
     
     }
     30% {
-        transform: scale(1.2) rotate(-45deg) ;
+        transform: scale(1.1) rotate(-45deg) ;
     }
     
     70% {
@@ -340,7 +391,7 @@ transform: rotate(-45deg);
     
     }
     30% {
-        transform: scale(1.2) rotate(45deg) ;
+        transform: scale(1.1) rotate(45deg) ;
     }
     
     70% {
@@ -357,7 +408,7 @@ transform: rotate(-45deg);
     
     }
     30% {
-        transform: scale(1.2) rotate(45deg) ;
+        transform: scale(1.1) rotate(45deg) ;
     }
     
     70% {
@@ -374,7 +425,7 @@ transform: rotate(-45deg);
     
     }
     30% {
-        transform: scale(1.2) rotate(-45deg) ;
+        transform: scale(1.1) rotate(-45deg) ;
     }
     
     70% {
@@ -387,10 +438,10 @@ transform: rotate(-45deg);
 
 @keyframes insertglow {
     0% {
-        box-shadow: 0 0 5px 5px red;
+        box-shadow: 0 0 8px 8px red;
     }
     100% {
-        box-shadow: 0 0 10px 10px red;
+        box-shadow: 0 0 15px 15px red;
     }
    
 }
@@ -413,6 +464,106 @@ transform: rotate(-45deg);
         box-shadow: 0 0 3px 3px white;
     }
 }
+
+@keyframes glowstickin {
+    0% {opacity: 0.5;
+    }
+    75% {
+        opacity: 1;
+        box-shadow: 0 0 8px 8px red ;
+    }
+    100% {opacity: 1;
+        box-shadow: 0 0 8px 8px red ;
+        
+    }
+}
+
+@keyframes glowstickin2 {
+    0% {opacity: 1;
+    box-shadow: 0 0 8px 8px red}
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 8px 8px red;
+    }
+}
+
+@keyframes glowstickin3 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glowstickin4 {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glowstickin5 {
+    0% { opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes glowstickin6 {
+    0% { opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fontappear {
+    0% {
+        opacity: 0;
+
+    
+    }
+    50% {
+        opacity: 1;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+@keyframes scalefont {
+    0% { opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+         transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+         transform: scale(1.1);
+    }
+}
+
+
 
 /*@glowsticks2 {
     0% {
