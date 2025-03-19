@@ -30,7 +30,7 @@ header {
     margin-top: 20px;
     height: 300px;
     width: 90%;
-    background: linear-gradient(180deg, black, rgb(255, 2, 141) , rgba(128, 126, 47, 0.986), white, rgb(134, 133, 54), rgb(255, 0, 106), black, black,  rgb(248, 20, 20) , rgb(116, 111, 48), white, rgb(122, 118, 53), red, black, black, black, rgb(252, 2, 106) , rgb(133, 131, 60), white, rgb(116, 111, 52), rgb(255, 0, 76), black, black, rgb(248, 20, 180) , rgb(143, 135, 61), white, rgb(133, 134, 56), red, black, black );
+    background: linear-gradient(180deg, black, rgb(255, 2, 141) , rgb(255, 98, 7), white, rgb(255, 136, 0), rgb(255, 0, 106), black, black,  rgb(248, 20, 20) , rgb(248, 91, 0), white, rgb(255, 115, 0), red, black, black, black, rgb(252, 2, 106) , rgb(255, 106, 7), white, rgb(255, 136, 0), rgb(255, 0, 76), black, black, rgb(248, 20, 180) , rgb(255, 119, 7), white, rgb(255, 115, 0), rgb(255, 0, 128), black, black );
 
     display: flex;
 justify-content: center;
@@ -74,6 +74,11 @@ a {
     color: black;
 }
 
+
+i:hover {
+    animation: scale .8s ease-in-out forwards
+}
+
 .icon::before {
     content: "";
     position: absolute;
@@ -90,17 +95,35 @@ a {
 @keyframes background-position {
     0% {
         background-position-y: 0px;
-        text-shadow: 0 0 25px rgb(183, 0, 255);
+        text-shadow: 0 0 15px rgb(4, 170, 247), 0 0 3px black;
     }
     25% {
-        text-shadow:0 0 25px rgb(4, 170, 247);
+        text-shadow:0 0 25px rgb(255, 0, 221), 0 0 3px rgb(62, 51, 75);
     }
     50% {
-        text-shadow: 0 0 25px red;
+        text-shadow: 0 0 15px red, 0 0 3px black;
     }
+
+    75% {
+         text-shadow: 0 0 25px rgb(255, 0, 212), 0  0 3px black
+    }
+    
 
     100% {
         background-position-y: 220px;
-        text-shadow: 0 0 25px rgb(183, 0, 255)
+       text-shadow: 0 0 15px rgb(4, 170, 247), 0 0 3px black;
+} }
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1.0);
+        text-shadow: 0 0 10px rgb(255, 0, 234);
+    }
+
+    100% {
+        transform: scale(1.1);
+        text-shadow: 0 0 20px rgb(255, 0, 234),
+        0 0 10px blue;
     }
 }
