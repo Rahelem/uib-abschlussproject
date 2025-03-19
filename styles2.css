@@ -48,8 +48,12 @@ margin: 8px
     color: rgb(131, 68, 231);
     opacity: 0;
     text-shadow: 0 0 5px blueviolet;
-    
+    font-size: .9em;
    
+}
+
+.fire {
+    color: rgb(236, 35, 119)
 }
 
 .sticks {
