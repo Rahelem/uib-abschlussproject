@@ -81,6 +81,8 @@ i:hover {
     
 }
 
+
+
 .sticks::before {
     content: "";
     position: absolute;
