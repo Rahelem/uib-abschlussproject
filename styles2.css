@@ -30,9 +30,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
     
 }
+
+
 
 #touch-surface > ul > li {
 list-style-type: none;
@@ -45,6 +48,7 @@ margin: 8px
     color: rgb(131, 68, 231);
     opacity: 0;
     text-shadow: 0 0 5px blueviolet;
+    
    
 }
 

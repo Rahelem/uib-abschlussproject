@@ -40,20 +40,26 @@ justify-content: center;
     height: 100px;
    z-index: 10;
    color: rgb(170, 249, 255);
+   display: flex;
+   justify-content: center;
+   align-items: center;
     
     
 }
 
 #upper-nav > ul > li {
     list-style-type: none;
-    color: rgb(170, 249, 255);
-    font-size: 1.4rem;
+    
+    font-size: 1.3rem;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     text-decoration: none;
+    margin: 5px
 }
 
-
+a i {
+   color: rgb(170, 249, 255);
+}
 
 .upper-line {
     width: 10px;
