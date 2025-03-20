@@ -81,6 +81,7 @@ i:hover {
     position: absolute;
     animation: move-up-down 1.25s ease-in-out forwards, turn-red-y .25s ease-in 1.25s forwards, glow .5s ease-in-out 1.25s forwards;
     transition: transform 1s ease-in-out;
+     box-shadow: 0 0 3px black, 0 0 5px 2px rgb(0, 153, 255);
    
 }
 
@@ -112,6 +113,7 @@ i:hover {
     z-index: 5;
     position: relative;
     animation: move-left-right 1.25s ease-in-out forwards, turn-red-x .25s ease-in 1.25s forwards, glow .5s ease-in-out 1.25s forwards;
+     box-shadow: 0 0 3px black, 0 0 5px 2px rgb(0, 153, 255);
 }
 
 /*.right-wrap {
@@ -129,7 +131,7 @@ i:hover {
     height: 10px;
     background: linear-gradient(90deg, rgb(21, 2, 107), rgb(98, 236, 241) 50%, rgb(21, 2, 107));
     margin: auto;
-    
+    box-shadow: 0 0 3px black, 0 0 5px 2px rgb(0, 153, 255);
     transform: translateX(-25px);
     z-index: 5;
     position: relative;
@@ -149,7 +151,7 @@ i:hover {
     height: 180px;
     background: linear-gradient(180deg, rgb(21, 2, 107), rgb(98, 236, 241) 50%, rgb(21, 2, 107));
     margin: auto;
-   
+    box-shadow: 0 0 3px black, 0 0 5px 2px rgb(0, 153, 255);
     transform: translateY(-25px);
     z-index: 5;
     position: absolute;
@@ -171,8 +173,8 @@ i:hover {
     margin: 0 auto;
     transform: rotate(45deg);
     padding: 50px;
-    animation: spin-left .75s ease-in-out none;
-    box-shadow: 0 0 3px black
+    animation: spin-left .75s ease-in-out none,   glow .5s ease-in-out 1.25s forwards;
+    box-shadow: 0 0 3px black, 0 0 10px 5px rgb(0, 153, 255)
     
     
 }
